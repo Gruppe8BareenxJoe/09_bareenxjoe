@@ -1,0 +1,168 @@
+---
+/*Burger menu */
+const burger = document.querySelector(".burger");
+const nav = document.querySelector("nav");
+const menu = document.querySelector(".menu");
+
+burger.addEventListener("click", burgerClick);
+function burgerClick() {
+  burger.classList.toggle("active");
+  nav.classList.toggle("active");
+}
+menu.addEventListener("click", menuClick);
+function menuClick() {
+  burger.classList.remove("active");
+  nav.classList.remove("active");
+}
+---
+
+<header>
+  <nav>
+    <a href="index.html"><img src="assets/hvidtlogo.svg" alt="logo" /></a>
+    <ul class="menu">
+      <li><a href="#info">om</a></li>
+      <li><a href="cards.html">produkter</a></li>
+      <li><a href="#footer">kontakt</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header li {
+    margin-left: 5%;
+    list-style: none;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    display: inline;
+  }
+  header img {
+    height: 100px;
+  }
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    background-color: #353535;
+  }
+  header {
+    background-color: #353535;
+  }
+
+  /************ Burgermenu **************/
+  .burger {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: fixed;
+    right: 45px;
+    top: 90px;
+  }
+
+  .burger .line {
+    width: 100%;
+    height: 2px;
+    background-color: #f3f0e9;
+    margin-bottom: 7px;
+    transition: 0.2s linear;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+    transition: 0.2s linear;
+    background-color: #f7c1d9;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+    background-color: #f7c1d9;
+  }
+  nav.active .menu {
+    display: block;
+    position: absolute;
+    right: 0%;
+    width: 50%;
+    top: 128px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    background-color: #f7c1d9;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  nav.active .menu li {
+    list-style: none;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #faf6f7;
+    display: block;
+  }
+
+  header .menu {
+    display: none;
+  }
+  @media screen and (min-width: 900px) {
+    header img {
+      height: 150px;
+      padding-left: 40px;
+    }
+    ul {
+      margin-top: 6rem;
+      text-align: right;
+      padding-right: 2rem;
+    }
+    header li a {
+      text-decoration: none;
+      font-family: Cormorant Garamond;
+      font-size: 1.5rem;
+      color: #f3f0e9;
+      font-family: Helvetica, sans-serif;
+      font-style: italic;
+    }
+    header li a:hover {
+      color: #f7c1d9;
+    }
+
+    .burger {
+      display: none;
+    }
+
+    header .menu {
+      display: flex;
+      list-style: none;
+      padding-right: 100px;
+    }
+    header ul {
+      justify-content: right;
+    }
+    .menu li {
+      display: inline;
+      cursor: pointer;
+      padding-left: 70px;
+    }
+    .menu a {
+      text-decoration: none;
+    }
+  }
+  @media screen and (min-width: 900px) {
+    nav {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+    }
+  }
+</style>
