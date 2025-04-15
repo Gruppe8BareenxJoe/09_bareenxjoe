@@ -1,0 +1,161 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<section>
+  <div class="knap back">
+    <button>TILBAGE</button>
+  </div>
+
+  <div class="indhold">
+    <div class="img-container">
+      <img class="img" src="shirt.png" alt="jakke" />
+    </div>
+    <div>
+      <h2>bareen x Joe & The Juice</h2>
+      <h1>Bare en juice - Tshirt</h1>
+      <p>499,- DKK</p>
+      <div class="farve">
+        <p>Farve:</p>
+        <div class="colers">
+          <div class="square_color"></div>
+          <div class="square_color"></div>
+          <div class="square_color"></div>
+        </div>
+      </div>
+
+      <div class="sizes">
+        <p>Størrelse:</p>
+        <div class="size">
+          <div class="square_size">S</div>
+          <div class="square_size">M</div>
+          <div class="square_size">L</div>
+          <div class="square_size">XL</div>
+        </div>
+      </div>
+
+      <div class="knap">
+        <button>KØB</button>
+      </div>
+
+      <div class="beskrivelse">
+        <p>Beskrivelse:</p>
+        Vores Interlock t-shirt i farven 'Black' er fremstillet af 69% bomuld og 31% genanvendt polyester, i et boxy fit. Denne t-shirt er konstrueret med sænket skuldre, bredde ærmer, rund hals samt printet grafik på front og bag.
+        <ul>
+          <li>Interlock t-shirt</li>
+          <li>Sænket skuldre</li>
+          <li>Bredde ærmer</li>
+          <li>Rund hals</li>
+          <li>Printet grafik på front og bag</li>
+          <li>210GSM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  body {
+    background-color: #6f6f6f;
+  }
+
+  .img {
+    max-width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+
+  .colers {
+    display: flex;
+    gap: 10px;
+  }
+
+  .square_color {
+    width: 30px;
+    height: 30px;
+    background-color: #ff69b4;
+    transition: transform 0.3s ease;
+  }
+
+  .square_color:hover {
+    transform: scale(1.1);
+  }
+
+  .size {
+    display: flex;
+    gap: 10px;
+  }
+
+  .square_size {
+    width: 30px;
+    height: 30px;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    transition: transform 0.3s ease;
+  }
+
+  .square_size:hover {
+    transform: scale(1.1);
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .knap button {
+    padding: 0.75rem 1.5rem;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #353535;
+    color: #f3f0e9;
+    border: 4px solid;
+    border-color: #f7c1d9;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+
+  .knap button:hover {
+    background-color: #f7c1d9;
+    border-color: #f3f0e9;
+    color: #353535;
+  }
+
+  ul li {
+    margin-bottom: 15px;
+  }
+
+  .farve {
+    margin-top: 30px;
+  }
+
+  .sizes {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .beskrivelse {
+    margin-top: 30px;
+  }
+
+  section {
+    padding: 45px;
+  }
+
+  @media (min-width: 768px) {
+    .indhold {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+  }
+</style>
