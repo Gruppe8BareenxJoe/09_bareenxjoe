@@ -1,0 +1,247 @@
+---
+
+---
+
+<footer>
+  <div class="footer1">
+    <p class="lille">GÅ ALDRIG GLIP AF NOGET</p>
+    <p class="fed">BLIV MEDLEM AF NYHEDSBREVET</p>
+
+    <form>
+      <input class="email" type="text" name="email" placeholder="Email" />
+      <input class="submit" type="submit" value="SKRIV MIG OP" />
+
+      <div class="check">
+        <input class="check" type="checkbox" checked="checked" name="sameemail" />Ja, jeg ønsker at modtage henvendelser fra bareen vedrørende tilbud, nyheder og produkter indenfor deres produktsortiment via email. Dit samtykke kan til enhver tid tilbagekaldes ved at skrive til os på: info@bareen.dk
+      </div>
+      <p class="private">BAREEN ApS behandler dine personoplysninger i overensstemmelse med vores privatlivspolitik</p>
+    </form>
+  </div>
+
+  <div class="footer2">
+    <h2>FLAGSHIP STORE</h2>
+    <a class="address" href="https://maps.google.com/maps?hl=da&gl=dk&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x4652531a5cb6d6bb:0x31a29b2c2c7a26d9">Ny Østergade 10, 1101 København K</a>
+  </div>
+  <div class="footer3">
+    <h2>KUNDESERVICE</h2>
+    <p><b>Man - Fre:</b> 9:00 - 16:00</p>
+    <p><b>Weekend & helligdage:</b> Lukket</p>
+    <p><b>Live chat:</b> Tilgås via ikon nederst til højre på siden</p>
+
+    <div class="social">
+      <img src="insta.svg" alt="Instgram" />
+      <img src="facebook.svg" alt="facebook" />
+    </div>
+    <div class="pay">
+      <img src="dankort.svg" alt="dankort" />
+      <img src="visa.svg" alt="visa" />
+      <img src="mobilepay.svg" alt="mobilepay" />
+      <img src="apple.svg" alt="applepay" />
+    </div>
+    <button class="help">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"></path>
+        <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"></path>
+      </svg>
+      <b>HJÆLP</b>
+    </button>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: #f7c1d9;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    padding: 20px;
+  }
+
+  .footer1,
+  .footer3,
+  .footer2 {
+    margin-bottom: 30px;
+    color: #353535;
+  }
+
+  .lille {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .fed {
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .footer2 h2,
+  a {
+    font-size: 0.9rem;
+  }
+  .footer2 {
+    align-items: flex-start;
+  }
+  .footer3 h2,
+  p {
+    font-size: 0.9rem;
+  }
+  .footer-bund {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+  }
+  .submit {
+    margin-top: 10px;
+    width: 100%;
+    background: #353535;
+    border-radius: 10px;
+    border-style: none;
+    color: #f3f0e9;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 11px 10px;
+    text-align: center;
+    cursor: pointer;
+    pointer-events: auto;
+    height: auto;
+  }
+
+  .email {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 38px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #353535;
+    border: 1px solid rgb(0, 0, 0);
+  }
+
+  input[type="checkbox"] {
+    accent-color: #353535;
+  }
+
+  .check {
+    max-width: 422px;
+    padding-bottom: 4px;
+    color: #353535;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .private {
+    font-size: 0.6rem;
+  }
+
+  .address {
+    color: #353535;
+  }
+
+  .help {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.75rem 1rem;
+    font-weight: bold;
+    background-color: #353535;
+    color: #f3f0e9;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    opacity: 0; /* Knappen er usynlig som standard */
+    pointer-events: none; /* Knappen kan ikke interageres med, når den er usynlig */
+    transition:
+      opacity 0.3s ease,
+      bottom 0.3s ease; /* Smooth transition */
+  }
+
+  .help.visible {
+    opacity: 1; /* Knappen bliver synlig, når den har 'visible' klassen */
+    pointer-events: auto; /* Gør knappen interaktiv, når den er synlig */
+  }
+
+  .help:hover {
+    background-color: #f7c1d9;
+    color: #353535;
+    border-color: #f3f0e9;
+  }
+
+  .social {
+    display: flex;
+    gap: 7px;
+    margin: 30px 0px 30px;
+  }
+  /* Media Queries for Desktop */
+  @media (min-width: 600px) {
+    footer {
+      gap: 100px; /* Større afstand på tablet */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    footer {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+
+    .help {
+      bottom: 2rem; /* Flyt help-knappen længere ned på desktop */
+    }
+    .check {
+      max-width: 272px;
+    }
+    .private {
+      max-width: 263px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    footer {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 200px;
+    }
+
+    .help {
+      bottom: 2rem; /* Flyt help-knappen længere ned på desktop */
+    }
+    .check {
+      max-width: 272px;
+    }
+    .private {
+      max-width: 263px;
+    }
+  }
+</style>
+<script>
+  // JavaScript til at vise og skjule knappen, når footeren er nået
+  document.addEventListener("scroll", function () {
+    var helpButton = document.querySelector(".help");
+    var footer = document.querySelector("footer");
+
+    // Beregn afstanden mellem toppen af dokumentet og footeren
+    var footerPosition = footer.getBoundingClientRect().top + window.scrollY;
+
+    // Hvis brugeren er tæt på footeren (100px fra bunden af skærmen), vis knappen
+    if (window.scrollY + window.innerHeight >= footerPosition - 80) {
+      helpButton.classList.add("visible");
+    } else {
+      helpButton.classList.remove("visible");
+    }
+  });
+</script>
