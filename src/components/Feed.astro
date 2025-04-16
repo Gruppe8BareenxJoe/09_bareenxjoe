@@ -1,0 +1,38 @@
+---
+
+---
+
+<section class="feed">
+  <img src="/assets/pigelyserodbaggrund.png" alt="Pige med lyserød baggrund" />
+  <img src="/assets/pinktshirtpaagalender.png" alt="Pink tshirt på gelænder" />
+  <img src="/assets/bareenmandbagfra.png" alt="Barren model" />
+  <img src="/assets/juicepaabord.png" alt="Juice på bord" />
+</section>
+
+<style>
+  .feed {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  .feed img {
+    width: 50%; /* Billeder fylder 100% på mobil */
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 1024px) {
+    .feed img {
+      width: 25%; /* 4 kolonner på desktop */
+    }
+  }
+  @media (min-width: 1200px) {
+    .feed img {
+      width: 25%; /* 4 kolonner på desktop */
+    }
+  }
+</style>
