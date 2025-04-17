@@ -3,10 +3,10 @@
 ---
 
 <section class="feed">
-  <img src="/assets/pigelyserodbaggrund.png" alt="Pige med lyserød baggrund" />
-  <img src="/assets/pinktshirtpaagalender.png" alt="Pink tshirt på gelænder" />
-  <img src="/assets/bareenmandbagfra.png" alt="Barren model" />
-  <img src="/assets/juicepaabord.png" alt="Juice på bord" />
+  <img class="work" src="/assets/work.webp" alt="Arbjede" />
+  <img class="pink" src="/assets/pinktshirtpaagalender.png" alt="Pink tshirt på gelænder" />
+  <img class="juice" src="/assets/juicepaabord.webp" alt="Juice" />
+  <img class="ryg" src="/assets/Outdoor_Logo_ryg.webp" alt="bareenxjoe bagfra" />
 </section>
 
 <style>
@@ -18,11 +18,21 @@
   }
 
   .feed img {
-    width: 50%; /* Billeder fylder 100% på mobil */
+    width: 50%;
+    height: auto;
+    aspect-ratio: 3/3;
+    object-fit: cover;
     display: block;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  .work {
+    object-position: 70% center;
+  }
+  .ryg {
+    object-position: 34% center;
   }
 
   @media (min-width: 1024px) {
