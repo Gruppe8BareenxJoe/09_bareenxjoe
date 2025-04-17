@@ -4,10 +4,10 @@ import Layout from "../layouts/Layout.astro";
 
 <section>
   <div class="image-container">
-    <img class="fullscrean" src="herocards.png" alt="hero_img" />
+    <img class="fullscrean" src="/assets/herocards.png" alt="hero_img" />
     <div class="overlay"></div>
     <div class="text-overlay">
-      <h2>bareen x Joe & The Juice</h2>
+      <h1><i>bareen</i> x Joe & The Juice</h1>
     </div>
   </div>
 </section>
@@ -16,7 +16,7 @@ import Layout from "../layouts/Layout.astro";
   .image-container {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     overflow: hidden;
   }
 
@@ -53,8 +53,12 @@ import Layout from "../layouts/Layout.astro";
     font-family: "Helvetica", sans-serif;
     font-weight: bold;
   }
-
-  h2 {
-    font-style: italic;
+  @media screen and (max-width: 900px) {
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 40vh;
+      overflow: hidden;
+    }
   }
 </style>

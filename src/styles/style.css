@@ -9,7 +9,28 @@ body {
 }
 h1 {
   color: #f3f0e9;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 2rem;
+  font-style: normal;
 }
 h2 {
   color: #f3f0e9;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+p {
+  color: #f3f0e9;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1rem;
+}
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
 }
