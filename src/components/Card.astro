@@ -1,39 +1,35 @@
 ---
-
+import ProductColor from "../components/ProductColor.astro";
+const { data } = Astro.props;
 ---
 
-<div class="cards">
-  <div class="card">
-    <h4>NYHED</h4>
-    <img src="/assets/cardstshirt.webp" alt="shirt" />
-    <h2>Bareen x Joe & the Juice</h2>
-    <div class="boxes">
-      <div class="box white"></div>
-      <div class="box black"></div>
-      <div class="box pink"></div>
-    </div>
-    <h3>T-shirt</h3>
-  </div>
-  <div class="card">
-    <img src="/assets/cardevent.webp" alt="shirt" />
-    <h2>Bareen x Joe & the Juice</h2>
-    <h3>Event</h3>
-  </div>
-  <div class="card">
-    <img src="/public/assets/juice.webp" alt="shirt" />
-    <h2>Bare en Juice</h2>
-    <h3>Juice</h3>
-  </div>
-</div>
+<article class="card">
+  <img src={data.image} alt={`Image of ${data.name}`} />
 
+  <h2>{data.collection}</h2>
+  <p>{data.name}</p>
+
+  <div class="boxes">
+    {
+      data.colors &&
+        data.colors.map((farve) => {
+          return <ProductColor color={farve} />;
+        })
+    }
+  </div>
+
+  <p>{data.price}</p>
+  <a href=`/products/${data.slug}`>Se produkt</a>
+</article>
 <style>
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
   .card {
     background-color: gray;
     border: 2px solid rgb(255, 255, 255);
+    display: grid;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+    justify-content: space-around;
+    padding-top: 2rem;
   }
   .card img {
     width: 100%;
@@ -49,39 +45,18 @@
     border: 1px solid black;
     display: inline-block;
   }
-
-  h4 {
-    position: absolute;
-    margin-left: 22px;
-    margin-top: 17px;
-    font-family: Helvetica;
-  }
-  h2 {
+  h2,
+  p {
     padding-left: 10px;
-    color: #f3f0e9;
-    font-family: Helvetica;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
     margin-bottom: 10px;
-  }
-  h3 {
-    padding-left: 10px;
-    color: #f7c1d9;
-    font-family: Helvetica;
-    padding-bottom: 20px;
   }
 
   .boxes {
-    position: absolute;
-    padding-left: 360px;
-  }
-
-  .white {
-    background-color: #f3f0e9;
-  }
-  .black {
-    background-color: #353535;
-  }
-
-  .pink {
-    background-color: #f7c1d9;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-left: 10px;
   }
 </style>

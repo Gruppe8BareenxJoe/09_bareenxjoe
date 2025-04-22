@@ -1,5 +1,78 @@
 ---
 import Card from "./Card.astro";
+
+const url = "https://ebgaaozuxogfzybvmnnq.supabase.co/rest/v1/bareenxjoe";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImViZ2Fhb3p1eG9nZnp5YnZtbm5xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQzNTU5NjEsImV4cCI6MjA1OTkzMTk2MX0.q07QZjBbiQbXNdPpXdaXU5fPVoy1aB5jVG3Meh85UR4";
+
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+
+const request = await fetch(url, options);
+const data = await request.json();
+
+console.log("data", data);
 ---
 
-<Card />
+<section class="cards">
+  {
+    data.map((product) => {
+      return <Card data={product} />;
+    })
+  }
+</section>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card {
+    background-color: gray;
+    border: 2px solid rgb(255, 255, 255);
+  }
+  .card img {
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+    margin-bottom: 20px;
+  }
+
+  .box {
+    height: 20px;
+    width: 20px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    display: inline-block;
+  }
+
+  h4 {
+    position: absolute;
+    margin-left: 22px;
+    margin-top: 17px;
+    font-family: Helvetica;
+  }
+  h2 {
+    padding-left: 10px;
+    color: #f3f0e9;
+    font-family: Helvetica;
+    margin-bottom: 10px;
+  }
+  h3 {
+    padding-left: 10px;
+    color: #f7c1d9;
+    font-family: Helvetica;
+    padding-bottom: 20px;
+  }
+
+  .boxes {
+    position: absolute;
+    padding-left: 360px;
+  }
+
+  .white {
+    background-color: #f3f0e9;
+  }
+</style>
