@@ -2,6 +2,29 @@
 import Collage from "../../components/Collage.astro";
 import Product from "../../components/Product.astro";
 import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const url = "https://ebgaaozuxogfzybvmnnq.supabase.co/rest/v1/bareenxjoe";
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImViZ2Fhb3p1eG9nZnp5YnZtbm5xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQzNTU5NjEsImV4cCI6MjA1OTkzMTk2MX0.q07QZjBbiQbXNdPpXdaXU5fPVoy1aB5jVG3Meh85UR4";
+
+  const options = {
+    headers: {
+      apikey: key,
+    },
+  };
+
+  const request = await fetch(url, options);
+  const data = await request.json();
+
+  return data.map((item) => {
+    return {
+      params: { product: item.slug },
+      props: { item },
+    };
+  });
+}
+
+const { item } = Astro.props;
 ---
 
 <Layout>
