@@ -9,8 +9,9 @@ import Layout from "../layouts/Layout.astro";
 
   <div class="indhold">
     <div class="img-container">
-      <img class="img" src="shirt.webp" alt="jakke" />
+      <img class="img" src="/assets/cardstshirt.webp" alt="jakke" />
     </div>
+
     <div>
       <h2>bareen x Joe & The Juice</h2>
       <h1>tshirt</h1>
@@ -21,40 +22,71 @@ import Layout from "../layouts/Layout.astro";
           <div class="square_color"></div>
           <div class="square_color"></div>
           <div class="square_color"></div>
+
+
+    <div class="tekst">
+      <div>
+        <h2 class="grå">bareen x Joe & The Juice</h2>
+        <h1>Bare en juice - Tshirt</h1>
+        <p>499,- DKK</p>
+        <div class="farve">
+          <h2>Farve:</h2>
+          <div class="colers">
+            <div class="square_color"></div>
+            <div class="square_color"></div>
+            <div class="square_color"></div>
+          </div>
+
         </div>
-      </div>
 
-      <div class="sizes">
-        <h2>Størrelse:</h2>
-        <div class="size">
-          <div class="square_size">S</div>
-          <div class="square_size">M</div>
-          <div class="square_size">L</div>
-          <div class="square_size">XL</div>
+        <div class="sizes">
+          <h2>Størrelse:</h2>
+          <div class="size">
+            <div class="square_size">S</div>
+            <div class="square_size">M</div>
+            <div class="square_size">L</div>
+            <div class="square_size">XL</div>
+          </div>
         </div>
-      </div>
 
-      <div class="knap">
-        <button>KØB</button>
-      </div>
+        <div class="knap">
+          <button>KØB</button>
+        </div>
 
-      <div class="beskrivelse">
-        <h2>Beskrivelse:</h2>
-        <p>Vores Interlock t-shirt i farven 'Black' er fremstillet af 69% bomuld og 31% genanvendt polyester, i et boxy fit. Denne t-shirt er konstrueret med sænket skuldre, bredde ærmer, rund hals samt printet grafik på front og bag.</p>
-        <ul>
-          <li>Interlock t-shirt</li>
-          <li>Sænket skuldre</li>
-          <li>Bredde ærmer</li>
-          <li>Rund hals</li>
-          <li>Printet grafik på front og bag</li>
-          <li>210GSM</li>
-        </ul>
+        <div class="beskrivelse">
+          <h2>Beskrivelse:</h2>
+          <p>Vores Interlock t-shirt i farven 'Black' er fremstillet af 69% bomuld og 31% genanvendt polyester, i et boxy fit. Denne t-shirt er konstrueret med sænket skuldre, bredde ærmer, rund hals samt printet grafik på front og bag.</p>
+          <ul>
+            <li>Interlock t-shirt</li>
+            <li>Sænket skuldre</li>
+            <li>Bredde ærmer</li>
+            <li>Rund hals</li>
+            <li>Printet grafik på front og bag</li>
+            <li>210GSM</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <style>
+  section {
+    margin-bottom: 4rem;
+  }
+  .grå {
+    font-style: italic;
+    color: #a1a0a0;
+    margin-bottom: 1rem;
+  }
+  .back {
+    margin-bottom: 2rem;
+  }
+
+  .tekst {
+    margin-top: 2rem;
+  }
+
   body {
     background-color: #6f6f6f;
   }
@@ -96,6 +128,7 @@ import Layout from "../layouts/Layout.astro";
     color: rgb(0, 0, 0);
     font-size: 14px;
     transition: transform 0.3s ease;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
   }
 
   .square_size:hover {
@@ -105,7 +138,6 @@ import Layout from "../layouts/Layout.astro";
   .img-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100%;
   }
 
@@ -120,8 +152,6 @@ import Layout from "../layouts/Layout.astro";
     border-color: #f7c1d9;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
-    margin-bottom: 25px;
   }
 
   .knap button:hover {
@@ -151,11 +181,35 @@ import Layout from "../layouts/Layout.astro";
     padding: 45px;
   }
 
+  ul {
+    color: #f3f0e9;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+
+  p {
+    margin-top: 1rem;
+  }
+
   @media (min-width: 768px) {
     .indhold {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
+    }
+
+    ul {
+      font-size: 1.2rem;
+    }
+
+    .back {
+      margin-bottom: 2rem;
+      margin-left: 2rem;
+    }
+
+    .tekst {
+      margin-top: 0rem;
     }
   }
 </style>

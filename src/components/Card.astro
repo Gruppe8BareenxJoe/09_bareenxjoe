@@ -3,6 +3,7 @@ import ProductColor from "../components/ProductColor.astro";
 const { data } = Astro.props;
 ---
 
+
 <article class="card">
   <img src={data.image} alt={`Image of ${data.name}`} />
 
@@ -16,6 +17,7 @@ const { data } = Astro.props;
           return <ProductColor color={farve} />;
         })
     }
+
   </div>
 
   <p>{data.price}</p>
@@ -23,6 +25,7 @@ const { data } = Astro.props;
 </article>
 <style>
   .card {
+
     background-color: gray;
     border: 2px solid rgb(255, 255, 255);
     display: grid;
@@ -52,11 +55,55 @@ const { data } = Astro.props;
     margin-bottom: 10px;
   }
 
+
   .boxes {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
     margin-bottom: 1rem;
     padding-left: 10px;
+
+  }
+
+  @media (max-width: 767px) {
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+    .card img {
+      width: 80%;
+      object-fit: cover;
+      height: 500px;
+      margin-bottom: 20px;
+      margin-left: 60px;
+    }
+    h4 {
+      position: absolute;
+      margin-left: 50px;
+      margin-top: 17px;
+      font-family: Helvetica;
+      padding-left: 30px;
+    }
+    h2 {
+      padding-left: 60px;
+      color: #f3f0e9;
+      font-family: Helvetica;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+    h3 {
+      padding-left: 60px;
+      color: #f7c1d9;
+      font-family: Helvetica;
+      padding-bottom: 20px;
+    }
+    a {
+      text-decoration: none;
+    }
+    .boxes {
+      position: sticky;
+      padding-left: 60px;
+    }
   }
 </style>
