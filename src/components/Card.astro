@@ -5,13 +5,16 @@
 <div class="cards">
   <div class="card">
     <h4>NYHED</h4>
-    <img src="/assets/cardstshirt.webp" alt="shirt" />
-    <h2>Bareen x Joe & the Juice</h2>
-    <div class="boxes">
-      <div class="box white"></div>
-      <div class="box black"></div>
-      <div class="box pink"></div>
-    </div>
+    <a href="/singleview">
+      <img src="/assets/cardstshirt.webp" alt="shirt" />
+      <h2>Bareen x Joe & the Juice</h2>
+      <div class="boxes">
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box pink"></div>
+      </div>
+    </a>
+
     <h3>T-shirt</h3>
   </div>
   <div class="card">
@@ -32,8 +35,8 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
   .card {
-    background-color: gray;
-    border: 2px solid rgb(255, 255, 255);
+    background-color: 353535;
+    padding: 10px;
   }
   .card img {
     width: 100%;
@@ -68,10 +71,13 @@
     font-family: Helvetica;
     padding-bottom: 20px;
   }
+  a {
+    text-decoration: none;
+  }
 
   .boxes {
-    position: absolute;
-    padding-left: 360px;
+    position: sticky;
+    padding-left: 12px;
   }
 
   .white {
@@ -83,5 +89,47 @@
 
   .pink {
     background-color: #f7c1d9;
+  }
+
+  @media (max-width: 767px) {
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+    .card img {
+      width: 80%;
+      object-fit: cover;
+      height: 500px;
+      margin-bottom: 20px;
+      margin-left: 60px;
+    }
+    h4 {
+      position: absolute;
+      margin-left: 50px;
+      margin-top: 17px;
+      font-family: Helvetica;
+      padding-left: 30px;
+    }
+    h2 {
+      padding-left: 60px;
+      color: #f3f0e9;
+      font-family: Helvetica;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+    h3 {
+      padding-left: 60px;
+      color: #f7c1d9;
+      font-family: Helvetica;
+      padding-bottom: 20px;
+    }
+    a {
+      text-decoration: none;
+    }
+    .boxes {
+      position: sticky;
+      padding-left: 60px;
+    }
   }
 </style>
